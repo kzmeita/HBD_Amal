@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Ulang Tahun Amalia Dwi Nurahma</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1589307004173-3c95204d00ee?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fHx8fA%3D%3D);" 
+class="flex justify-center h-screen items-center">
+
+    <audio id="lagu" loop>
+        <source src="https://www.myinstants.com/media/sounds/happy-birthday-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="bg-white border px-10 py-8 border-gray-300 shadow-pink-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80" id="kartu">
+        <h1 class="text-3xl">Happy Birthday</h1>
+        <h1 class="text-4xl text-pink-500 font-bold animate__animated animate__pulse animate__infinite">Amalia Dwi Nurahma</h1>
+        <button class="p-2 bg-pink-600 text-white rounded mt-5 hover:bg-pink-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()">Klik Disini Neng :)</button>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script>
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+    });
+
+    let kartu = document.getElementById("kartu");
+    function ubahKartu() {
+        let lagu = document.getElementById("lagu");
+        lagu.play();
+
+        kartu.innerHTML = `
+            <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">Dear Amalia Dwi Nurahma,</h1>
+            <div class="flex justify-center">
+                <img src="WhatsApp Image 2025-04-02 at 20.39.10_515595c9.jpg" class="rounded-full w-40 h-40 object-cover border-4 border-pink-500 shadow-lg animate__animated animate__fadeIn" alt="Foto Amalia">
+            </div>
+            <p class="mt-4">Hari ini adalah hari yang spesial karena ini adalah hari ulang tahunmu! 🎈 Aku ingin mengucapkan selamat ulang tahun dan semoga semua impian serta harapanmu menjadi kenyataan. 🎁</p>
+            <p>Semoga tahun ini penuh dengan kebahagiaan, kesehatan, dan kesuksesan. Teruslah menjadi pribadi yang luar biasa dan tetap semangat menghadapi semua tantangan di depan! 😊✨</p>
+            <p>Dengan penuh kasih,</p>
+            <p class="text-lg font-bold text-pink-600">Lui 💖</p>
+        `;
+    }
+</script>
+</body>
+</html>
